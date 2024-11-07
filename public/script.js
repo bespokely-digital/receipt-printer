@@ -30,8 +30,6 @@ async function initialisePrinter() {
     console.log('connected', device);
 
     console.log(`Connected to ${device.manufacturerName} ${device.productName}`);
-    // printerLanguage = device.language || 'esc-pos'; // Use detected language or default to 'esc-pos'
-    console.log("printerLanguage", printerLanguage);
     
     // codepageMapping = device.codepageMapping || {}; // Use codepageMapping if available, otherwise empty object
     
