@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt Printer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Receipt Printer Interface</h1>
+  
+  <button id="connectPrinter">Connect to USB Printer</button>
+  <button id="printReceipt" disabled>Print Receipt</button>
+  
+  <!-- Load the printer library -->
+  <script src="webusb-receipt-printer.umd.js"></script>
+  <script src='receipt-printer-encoder.umd.js'></script>
+  <script src="script.js"></script>
+</body>
+</html>
