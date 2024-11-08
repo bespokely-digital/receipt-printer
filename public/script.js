@@ -7,22 +7,22 @@ const printButton = document.getElementById('printReceipt');
 const savedDevice = JSON.parse(localStorage.getItem('lastUsedDevice'));
 
 console.log("savedDevice", savedDevice);
-// console.log(ReceiptPrinterEncoder.printerModels);
+console.log(ReceiptPrinterEncoder.printerModels);
 
 // Initialise printer connection
 async function initialisePrinter() {
   receiptPrinter = new WebUSBReceiptPrinter();
 
   // Try reconnecting if we have saved device information
-  if (savedDevice) {
-    try {
-      await receiptPrinter.reconnect(savedDevice);
-      console.log('Reconnected to previously used printer');
-      enablePrintButton();
-    } catch (error) {
-      console.warn('Failed to reconnect:', error);
-    }
-  }
+  // if (savedDevice) {
+  //   try {
+  //     await receiptPrinter.reconnect(savedDevice);
+  //     console.log('Reconnected to previously used printer');
+  //     enablePrintButton();
+  //   } catch (error) {
+  //     console.warn('Failed to reconnect:', error);
+  //   }
+  // }
 
   // Listen for "connected" event and store device details
   receiptPrinter.addEventListener('connected', device => {
